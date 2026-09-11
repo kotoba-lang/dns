@@ -5,7 +5,7 @@
  ;; local/root is relative to this deps.edn: from the _wt-* worktree layout
  ;; (orgs/kotoba-lang/_wt-dns) ../appkit is the west checkout
  ;; orgs/kotoba-lang/appkit. Verified green from this layout
- ;; (shadow-cljs compile app, cold cache, 0 errors).
+ ;; (amu compile --target wasm32-browser app, cold cache, 0 errors).
  :aliases
  {:cljs
   {:extra-deps {thheller/shadow-cljs {:mvn/version "2.28.20"}
