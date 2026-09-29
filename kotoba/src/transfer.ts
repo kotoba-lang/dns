@@ -181,7 +181,7 @@ export async function putTransferStep(
   if (!parent) return { status: "requestNotFound" };
 
   // Validate signal:v1 encryption for authCode step (vault zero-knowledge
-  // invariant per root CLAUDE.md).
+  // invariant per root AGENTS.md).
   if (input.step === "authCode" && input.authCodeEncrypted) {
     if (!input.authCodeEncrypted.startsWith("signal:v1:")) {
       return { status: "rejected", error: "authCodeNotEncrypted" };

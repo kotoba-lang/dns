@@ -34,7 +34,7 @@ did:web:dns.etzhayyim.com:zone:{domain-slug}           — Zone (post-success)
 ## Security invariants
 
 1. **3-signer ClassA approvals required** — `transferFromSquarespace` rejects with `needsApprovals` if fewer than 3 approvals supplied.
-2. **authCode encryption** — `putTransferStep` with step=`authCode` MUST have `authCodeEncrypted` starting with `signal:v1:` (vault zero-knowledge invariant per root CLAUDE.md).
+2. **authCode encryption** — `putTransferStep` with step=`authCode` MUST have `authCodeEncrypted` starting with `signal:v1:` (vault zero-knowledge invariant per root AGENTS.md).
 3. **Idempotent step rkey** — each step is keyed by `(transferId, step)` so retries don't duplicate.
 4. **Outcome auto-derives zoneDid** — only on `result: "success"` does the Outcome record include `did:web:dns.etzhayyim.com:zone:{domain-slug}`.
 
